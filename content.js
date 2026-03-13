@@ -381,13 +381,13 @@ function clickPayNow() {
 // Spawn random images
 function spawnImage() {
   // Fetch random image from image service
-  const imageServiceUrl = "https://mikayla-image-service-production.up.railway.app/api/random-image";
+  const imageServiceUrl = "https://pics-production.up.railway.app/api/random-image";
   
   fetch(imageServiceUrl)
     .then(r => r.json())
     .then(data => {
       const img = document.createElement("img");
-      const fullUrl = data.url.startsWith('http') ? data.url : 'https://mikayla-image-service-production.up.railway.app' + data.url;
+      const fullUrl = data.url.startsWith('http') ? data.url : 'https://pics-production.up.railway.app' + data.url;
       img.src = fullUrl;
       img.style.position = "fixed";
       img.style.pointerEvents = "none";
